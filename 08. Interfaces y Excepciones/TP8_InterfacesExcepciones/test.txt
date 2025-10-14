@@ -1,0 +1,5 @@
+Línea 1: Este es un archivo de prueba
+Línea 2: Para demostrar try-with-resources
+Línea 3: El recurso se cierra automáticamente
+Línea 4: Sin necesidad de finally
+Línea 5: ¡Universidad Tecnológica Nacional! ☕
