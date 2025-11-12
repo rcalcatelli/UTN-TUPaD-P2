@@ -498,8 +498,6 @@ Durante el desarrollo se utilizó asistencia de **Claude (Anthropic)** para:
 
 ---
 
-⭐ **Si te gustó este proyecto, dale una estrella en GitHub** ⭐
-
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/usuario/sistema-usuarios-credenciales)
 
 </div>
