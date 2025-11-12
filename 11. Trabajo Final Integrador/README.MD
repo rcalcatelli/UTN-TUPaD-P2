@@ -229,8 +229,8 @@ CREATE TABLE credencial_acceso (
 
 #### 1️⃣ Clonar repositorio
 ```bash
-git clone https://github.com/usuario/sistema-usuarios-credenciales.git
-cd sistema-usuarios-credenciales
+git clone https://github.com/rcalcatelli/UTN-TUPaD-P2.git
+cd "UTN-TUPaD-P2/11. Trabajo Final Integrador"
 ```
 
 #### 2️⃣ Crear base de datos
