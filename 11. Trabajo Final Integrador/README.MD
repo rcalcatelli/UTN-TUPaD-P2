@@ -142,21 +142,19 @@ CREATE TABLE credencial_acceso (
 │                       │   └── 📄 CredencialAcceso.java
 │                       │
 │                       ├── 📂 dao/
-│                       │   ├── 📄 GenericDao.java
 │                       │   ├── 📄 UsuarioDao.java
 │                       │   └── 📄 CredencialAccesoDao.java
 │                       │
 │                       ├── 📂 service/
-│                       │   ├── 📄 GenericService.java
 │                       │   ├── 📄 UsuarioService.java
 │                       │   └── 📄 CredencialAccesoService.java
 │                       │
 │                       └── 📂 main/
-│                           ├── 📄 Main.java
-│                           └── 📄 AppMenu.java
+│                           └── 📄 Main.java
 │
 ├── 📂 database/
-│   └── 📄 schema.sql
+│   ├── 📄 01_crear_base_datos.sql
+│   └── 📄 02_datos_prueba.sql
 │
 ├── 📂 docs/
 │   ├── 📄 TFI_Documentacion.pdf
