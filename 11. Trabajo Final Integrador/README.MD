@@ -477,19 +477,6 @@ Estos conocimientos constituyen la base fundamental para el desarrollo de softwa
 
 ---
 
-## 🤝 Uso de IA
-
-Durante el desarrollo se utilizó asistencia de **Claude (Anthropic)** para:
-- Consultas sobre mejores prácticas de Java y SQL
-- Revisión de sintaxis y patrones de diseño
-- Sugerencias de estructura arquitectónica
-- Generación de diagramas UML
-- Asistencia en documentación técnica
-
-**Nota importante:** La IA se utilizó como herramienta de consulta y aprendizaje. Todo el código fue escrito, comprendido, probado y validado personalmente por el equipo de desarrollo.
-
----
-
 <div align="center">
 
 **Universidad Tecnológica Nacional**  
