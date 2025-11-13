@@ -496,7 +496,7 @@ Estos conocimientos constituyen la base fundamental para el desarrollo de softwa
 - MySQL. (2024). *MySQL 8.0 Reference Manual*. https://dev.mysql.com/doc/refman/8.0/en/
 - Fowler, M. (2002). *Patterns of Enterprise Application Architecture*. Addison-Wesley Professional
 - Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). *Design Patterns: Elements of Reusable Object-Oriented Software*. Addison-Wesley Professional
-- Universidad Tecnológica Nacional. (2024). *Programación II - Material de Cátedra*
+- Universidad Tecnológica Nacional. (2025). *Programación II - Material de Cátedra*
 
 ---
 
