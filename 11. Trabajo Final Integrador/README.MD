@@ -80,27 +80,47 @@ El TFI se estructura en componentes claramente definidos que trabajan en conjunt
 ```sql
 CREATE TABLE usuario (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    apellido VARCHAR(100) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    eliminado BOOLEAN DEFAULT FALSE,
-    INDEX idx_email (email)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    eliminado BOOLEAN NOT NULL DEFAULT FALSE,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    nombre_completo VARCHAR(100) NOT NULL,
+    activo BOOLEAN NOT NULL DEFAULT TRUE,
+    fecha_registro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    
+    CONSTRAINT uq_usuario_username UNIQUE (username),
+    CONSTRAINT uq_usuario_email UNIQUE (email),
+    
+    INDEX idx_usuario_username (username),
+    INDEX idx_usuario_email (email),
+    INDEX idx_usuario_activo (activo),
+    INDEX idx_usuario_eliminado (eliminado)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
 #### **Tabla credencial_acceso**
 ```sql
 CREATE TABLE credencial_acceso (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id BIGINT NOT NULL UNIQUE,
-    nombre_usuario VARCHAR(50) NOT NULL UNIQUE,
-    password_hash VARCHAR(64) NOT NULL,
-    salt VARCHAR(32) NOT NULL,
-    intentos_fallidos INT DEFAULT 0,
-    ultimo_intento DATETIME,
-    eliminado BOOLEAN DEFAULT FALSE,
-    FOREIGN KEY (usuario_id) REFERENCES usuario(id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    eliminado BOOLEAN NOT NULL DEFAULT FALSE,
+    usuario_id BIGINT NOT NULL,
+    hash_password VARCHAR(255) NOT NULL,
+    salt VARCHAR(64),
+    ultimo_cambio DATETIME,
+    requiere_reset BOOLEAN NOT NULL DEFAULT FALSE,
+    intentos_fallidos INT NOT NULL DEFAULT 0,
+    ultimo_login DATETIME,
+    
+    CONSTRAINT fk_credencial_usuario 
+        FOREIGN KEY (usuario_id) 
+        REFERENCES usuario(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    
+    CONSTRAINT uq_credencial_usuario UNIQUE (usuario_id),
+    
+    INDEX idx_credencial_usuario (usuario_id),
+    INDEX idx_credencial_eliminado (eliminado)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
 ### 🔐 **Sistema de Seguridad**
