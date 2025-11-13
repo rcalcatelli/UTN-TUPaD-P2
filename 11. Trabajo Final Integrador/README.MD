@@ -283,15 +283,18 @@ java -cp "bin:lib/*" com.utn.programacion2.main.Main
 ### Menú Principal
 ```
 ═══════════════════════════════════════════════════
-              MENÚ PRINCIPAL
+                    MENÚ PRINCIPAL
 ═══════════════════════════════════════════════════
-
- 1. Gestión de Usuarios
- 2. Gestión de Credenciales
- 3. Autenticación / Login
- 0. Salir
-
+1. Crear Usuario con Credencial
+2. Buscar Usuario por ID
+3. Buscar Usuario por Username
+4. Listar Todos los Usuarios
+5. Actualizar Usuario
+6. Activar/Desactivar Usuario
+7. Eliminar Usuario (Baja Lógica)
+8. Salir
 ═══════════════════════════════════════════════════
+Seleccione una opción: 
 ```
 
 ---
